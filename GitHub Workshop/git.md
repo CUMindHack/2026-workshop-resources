@@ -1,3 +1,4 @@
+# Intro:
 ```bash
 # Machine 1: Init and First Commit
 git init
@@ -91,6 +92,12 @@ git diff --diff-filter=U
 git add file-a
 git status
 git rebase --continue
+
+git checkout dev
+git merge feature-video
+git log --oneline --graph --all
+git push
+
 git push -d origin feature-video # delete the remote branch (not required, but makes the graph nicer)
 git log --oneline --graph --all
 
@@ -119,11 +126,36 @@ git checkout dev
 git merge example_username-work-laptop
 git merge example_username-home-computer
 ```
-
 # TODO: gotta convert this into more presentable form, and reverify correctness
-cmdline explain
+- cmdline explain
 
-aliases
+- aliases
 
-ssh
-ssh-agent
+- ssh
+- ssh-agent
+
+# Advanced
+```bash
+# .gitignore
+echo '*.exe' >> .gitignore # dont add '*.exe' files to git
+
+# TODO: explain hashes
+
+# worktrees
+git clone git@github.com:example_user/example_repo_name.git example_repo_name_worktree # only clones the '.git/*'
+cd example_repo_name_worktree
+# worktree(./) -add> staging(./.git/index) -commit>  repository(./.git/objects)
+# repository(./.git/objects) -checkout> worktree(./)
+# we have '.git/*' (staging and repository), so we need worktree; we can have more than one
+# which lets us work on multiple branches at the same time
+git worktree add example_username-work-laptop
+git worktree add example_username-home-computer
+
+# git tags
+git tag -a "v0.0.1" # semantic versioning for releases (semver.org)
+# i dont work at a company that *really* cares about this, so i have my own variation
+# `<version> = v<major>.<minor>.<patch>-<type>`
+# `<type>` is a suffix letter, normally placed if i want to notify myself about weird things
+# u = unstable (i think the code could be better tested, or i just made a big change)
+# f = hotfix (i quickly threw this together trying to fix things)
+```
