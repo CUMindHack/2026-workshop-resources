@@ -71,6 +71,7 @@ git fetch # this gets the metadata from the server
 git log --oneline --graph --all
 git checkout dev
 git merge feature-audio
+git diff --check
 git diff --diff-filter=U
 git diff --ours
 git diff --theirs
