@@ -2,7 +2,7 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("Demo 4")
-root.geometry("540x350")
+root.geometry("600x400")
 root.resizable(False, False)
 root.config(padx=16, pady=16)
 

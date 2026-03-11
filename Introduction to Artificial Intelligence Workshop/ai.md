@@ -1,7 +1,7 @@
 # Introduction to Artificial Intelligence
 
 Saturday, March 21st \
-TB 446 @ 1:30 PM - 3:00 PM
+TB 446 @ 3:00 PM - 4:30 PM
 
 Introduction to Artificial Intelligence as it relates to Data Science, Cognitive Science, and broader Computer Science techniques. Topics include data processing, statistical techniques, and comparing models. This presentation is very far from being comprehensive and designed to introduce and guide you through possibilities for your projects.
 
