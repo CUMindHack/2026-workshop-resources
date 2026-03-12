@@ -152,7 +152,13 @@ git merge example_username-home-computer
 # .gitignore
 echo '*.exe' >> .gitignore # dont add '*.exe' files to git
 
-# TODO: explain hashes
+# the list of numbers&letters that appear on our commits are hashes
+# hashes are just math scrambled versions of our data so that we can
+# refer to a commit with a name
+# the reason we don't just keep a running total number is that:
+# 1. users may be editing the repo offline at different times (distributed systems)
+# 2. maybe we don't want to be able to enumerate commits for security reasons
+# 3. it is unique based on the content (and time), so it is easier to tell commits apart
 
 # worktrees
 git clone git@github.com:example_user/example_repo_name.git example_repo_name_worktree # only clones the '.git/*'
