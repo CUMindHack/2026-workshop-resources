@@ -20,6 +20,16 @@ git log --oneline --graph --all
 git remote add origin git@github.com:example_user/example_repo_name.git
 git push -u origin main # in gitlab it creates the repo for you here, in github we must go to their website to create it manually
 
+git config user.name "example_username" # you can add the '--global' flag if you only have one provider
+git config user.email "example_email" # not verified (fix: digital signatures)
+
+# Example Mistake
+echo "dont commit this" >> ignorethisfile
+git status
+
+echo "ignorethisfile" >> .gitignore
+git status # notice ignorethisfile is missing
+
 # Machine 1: Setup Branches
 git checkout -b dev
 git push -u origin dev
@@ -65,6 +75,9 @@ git checkout feature-video
 echo "feature video" >> file-a
 git add file-a
 git commit
+git push
+git log --oneline --graph --al
+git branch --all
 
 # Machine 1: Merge Audio into Dev
 git log --oneline --graph --all
