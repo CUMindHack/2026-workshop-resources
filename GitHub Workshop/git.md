@@ -1,5 +1,23 @@
 # Intro:
 ```bash
+# install git (if you haven't done this, don't worry, the content is simple)
+
+# remember, most command lines work by taking the first word as a command/binary name
+# the rest of the text is space separated and given to the program at startup
+
+# how git works:
+# there is some central server that stores all the data for the repository
+# users make copies of the repository and edit it offline (not live edit)
+# users then submit changes to the server
+# any changes that happened to the all the below will cause a conflict
+# when trying to merge the user's change with the current state:
+# - on the same time
+# - and to the same branch # explained below
+# - and to the same file
+# - and to the same area
+# a repository is a history of branches (in a directed acyclic graph [a graph with no cycles, mono-directional])
+# branches are ways to keep track of a position on the graph
+
 # Machine 1: Init and First Commit
 git init
 git branch -M main # using main, cause society hates masters
@@ -20,8 +38,24 @@ git log --oneline --graph --all
 git remote add origin git@github.com:example_user/example_repo_name.git
 git push -u origin main # in gitlab it creates the repo for you here, in github we must go to their website to create it manually
 
+# setup git, cause that didn't work
 git config user.name "example_username" # you can add the '--global' flag if you only have one provider
 git config user.email "example_email" # not verified (fix: digital signatures)
+
+# setup git, cause that didn't work
+cd ~/.ssh
+ssh-keygen -t ed25519 # ed25519 is a public-private key cryptography protocol
+# linux
+eval "$(ssh-agent -s)" # put this in startup
+ssh-add ~/.ssh/github # github is the name of the private key that i made
+# windows
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+Start-Service ssh-agent
+ssh-add ~/.ssh/github # github is the name of the private key that i made
+
+# copy the PUBLIC KEY '~/.ssh/github.pub'
+# go to github.com > settings > SSH & GPG Keys > Add Key
+# paste the PUBLIC KEY into the box and save
 
 # Example Mistake
 echo "dont commit this" >> ignorethisfile
@@ -139,13 +173,6 @@ git checkout dev
 git merge example_username-work-laptop
 git merge example_username-home-computer
 ```
-# TODO: gotta convert this into more presentable form, and reverify correctness
-- cmdline explain
-
-- aliases
-
-- ssh
-- ssh-agent
 
 # Advanced
 ```bash
