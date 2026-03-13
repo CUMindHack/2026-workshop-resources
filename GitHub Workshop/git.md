@@ -166,7 +166,7 @@ git checkout -b example_username-home-computer
 git merge example_username-work-laptop # we can also just merge horizontally, since we dont care about a 'sane' graph
 # do work here
 # since we have our own workspace now, we have 0 chance of a conflict, meaning we can optimize our workflow
-alias gsync='git fetch && git commit -a && git push'
+alias gsync='git fetch && git commit -am "Quicksave: $(date +%Y-%m-%d_%H:%M:%S)" && git push'
 gsync
 
 git checkout dev
@@ -178,6 +178,9 @@ git merge example_username-home-computer
 ```bash
 # .gitignore
 echo '*.exe' >> .gitignore # dont add '*.exe' files to git
+
+# cooler git log
+alias glog="git log --graph --all --pretty=format:'%C(auto)%h %C(blue)%ad%C(auto)%d %al: %C(green)%s%C(auto)' --date='format:%Y-%m-%d %Hh%M'"
 
 # the list of numbers&letters that appear on our commits are hashes
 # hashes are just math scrambled versions of our data so that we can
