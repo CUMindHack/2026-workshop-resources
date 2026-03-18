@@ -5,6 +5,8 @@ TB 446 @ 3:00 PM - 4:30 PM
 
 Introduction to Artificial Intelligence as it relates to Data Science, Cognitive Science, and broader Computer Science techniques. Topics include data processing, statistical techniques, and comparing models. This presentation is very far from being comprehensive and designed to introduce and guide you through possibilities for your projects.
 
+Shout out to Dr. Mary Kelly's class CGSC 3601 - Artificial Intelligence and Cognitive Science
+
 ## Outline
 * Expectations and Movitations
 * What is Artificial Intelligence?
@@ -37,4 +39,8 @@ There will be time for questions at the end.
 # Comparing Models
 
 # Using Models, Examples, Application to Projects
+
+# ACT-R
+
+# Hopfield Networks
 
