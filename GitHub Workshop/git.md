@@ -276,9 +276,9 @@ git merge example_username-work-laptop
 # since we have our own workspace now, we have 0 chance of a conflict, meaning we can optimize our workflow
 function gsync_commit() { echo "Quicksave: $(date +%Y-%m-%d_%H:%M:%S)"; }
 # if you prefer naming things, remove the `-m "message"`
-alias gsync='git fetch && git commit -am "$(gsync_commit)" && git push'
-alias gsync_all='git fetch && git add -A && git commit -m "$(gsync_commit)" && git push'
-alias gsync_patch='git fetch && git add -p && git commit -m "$(gsync_commit)" && git push'
+alias gsync='git pull && git commit -am "$(gsync_commit)" && git push'
+alias gsync_all='git pull && git add -A && git commit -m "$(gsync_commit)" && git push'
+alias gsync_patch='git pull && git add -p && git commit -m "$(gsync_commit)" && git push'
 gsync
 
 git checkout dev
