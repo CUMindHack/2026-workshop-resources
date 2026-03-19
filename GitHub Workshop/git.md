@@ -8,7 +8,7 @@
 # - understand the purpose and idea of branching
 # - understand the purpose and idea of merging
 
-# git is a software, it lets you upload/download code snapshots to/from a server
+# git is a piece of software, it lets you upload/download code snapshots to/from a server
 # while also managing concurrent offline modifications.
 # Github is a company that hosts git instances for you to upload your code to.
 
@@ -135,7 +135,7 @@
 # GOAL: the coworker creates the feature branch
 # Machine 2: Feature Video
     git fetch
-    git checkout dev
+    git checkout dev # technically we should use `git checkout -t origin/dev`, however git can guess for us
     git pull # this is very similar to `git fetch` and then a `git merge` to the latest branch commit
     git checkout -b feature-video
     git push -u origin feature-video
@@ -260,12 +260,14 @@
     git pull
     git checkout -b example_username-work-laptop
     # do work here
+    git push
 
 # Machine 2: the coworker also sets up their development environment
     git checkout dev
     git pull
     git checkout -b example_username-home-computer
     # do work here
+    git push
 
     # we can also just merge horizontally, since we don't care about a 'sane' graph
     git merge example_username-work-laptop
@@ -283,6 +285,7 @@
     gsync
 
     git checkout dev
+    git pull --all
     git merge example_username-work-laptop
     git merge example_username-home-computer
 # CONCLUDE: this is how my closest friends and I work, as well as the previous team I worked on
