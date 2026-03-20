@@ -11,25 +11,13 @@ Shout out to Dr. Nadine Moacdieh who teaches COMP 3008.
 
 * Motivations and Introductions to HCI 
 * Theories and Design Principals
-* Users and Machines
 * Designing an Interface
 * Evaluating a Design 
-
-If we have extra time, we may cover:
-
-* Basic Overview of Research in HCI
-* Basics of Eye Tracking
 
 # Motivations and Introductions to HCI 
 
 # Theories and Design Principals
 
-# Users and Machines 
-
 # Designing an Interface
 
 # Evaluating a Design
-
-# Basic Overview of Research in HCI 
-
-# Basics of Eye Tracking
