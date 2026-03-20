@@ -12,7 +12,6 @@ Shout out to Dr. Nadine Moacdieh who teaches COMP 3008.
 * Motivations and Introductions to HCI 
 * Theories and Design Principals
 * Designing an Interface
-* Evaluating a Design 
 
 # Motivations and Introductions to HCI 
 
@@ -20,4 +19,4 @@ Shout out to Dr. Nadine Moacdieh who teaches COMP 3008.
 
 # Designing an Interface
 
-# Evaluating a Design
+
