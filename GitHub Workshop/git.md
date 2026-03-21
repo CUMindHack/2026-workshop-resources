@@ -282,6 +282,11 @@
     alias gsync='git pull && git commit -am "$(gsync_commit)" && git push'
     alias gsync_all='git pull && git add -A && git commit -m "$(gsync_commit)" && git push'
     alias gsync_patch='git pull && git add -p && git commit -m "$(gsync_commit)" && git push'
+    # NOTE: because we use git pull, if you have any changes and you are `git config pull.rebase true` the script will fail
+    # fixes include:
+    # - change `git pull` to `git fetch`
+    # - change `git pull` to `git pull --no-rebase`
+    # - change `git pull` to `git pull --rebase --autostash`
     gsync
 
     git checkout dev
